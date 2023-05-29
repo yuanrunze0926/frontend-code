@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件监听</title>
+</head>
+<body>
+    <h3>事件监听</h3>
+    <p id="text">为DOM元素添加事件监听,等待事件发生,便立即执行一个函数</p>
+    <button id="btn">点击改变文字颜色</button>
+
+    <script>
+        // 1.获取button对应的DOM对象
+        const btn = document.querySelector('#btn')
+        // 2.添加事件监听
+        btn.addEventListener('click',function(){
+            console.log('等待事件被触发。。')
+            // 改变p标签的文字颜色
+            let text = document.getElementById('text')
+            text.style.color = 'red'
+        })
+        // 3.只要用户点击了按钮，事件便触发
+
+
+    </script>
+</body>
+</html>

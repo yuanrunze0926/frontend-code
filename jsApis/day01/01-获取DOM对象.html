@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 查找节点</title>
+</head>
+<body>
+    <h3>查找元素类型节点</h3>
+    <p>从整个 DOM 树中查找 DOM 节点是学习 DOM 的第一个步骤</p>
+    <ul>
+        <li>元素</li>
+        <li>元素</li>
+        <li>元素</li>
+        <li>元素</li>
+    </ul>
+    <div class="intro"></div>
+    <img class="pic" src="" alt="">
+    <script>
+        const p = document.querySelector('p') // 获取第一个p元素
+        const lis = document.querySelectorAll('li') // 获取所有li元素
+        console.log(p)
+        console.log(lis)
+
+        // innerHTML 将文本内容添加/更新到任意标签位置
+        const intro = document.querySelector('.intro')
+        intro.innerHTML = 'Hello,World!'
+        intro.innerHTML = '<h4> Hello,世界！</h4>'
+        // 如果文本内容中包含html标签推荐使用innerHTML 否则建议使用 innerText
+
+        // 1.获取 img 对应的 DOM 元素
+        const pic = document.querySelector('.pic')
+        // 2.修改属性
+        pic.src = './images/one.webp'
+        pic.width = 200;
+        pic.alt = "图片不见了。。。"
+
+    </script>
+</body>
+</html>

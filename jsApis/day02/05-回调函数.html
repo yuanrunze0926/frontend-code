@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回调函数</title>
+</head>
+<body>
+    <script>
+        // 声明 foo 函数
+        function foo(arg) {
+            console.log(arg);
+        }
+
+        // 使用普通的值作为参数
+        foo(10);
+        foo('hello');
+        foo(['html', 'js', 'css']);
+
+        function bar() {
+            console.log('函数也能当参数。。');
+        }
+
+        foo(bar);
+    </script>
+</body>
+</html>

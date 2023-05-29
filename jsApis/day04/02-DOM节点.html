@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM节点</title>
+</head>
+<body>
+    <h3>插入节点</h3>
+    <p>在现有的dom结构基础上插入新的元素节点</p>
+    <hr>
+    <!-- 普通盒子 -->
+    <div class="box"></div>
+    <!-- 点击按钮向box盒子插入节点 -->
+    <button class="btn">插入节点</button>
+    <script>
+        // 点击按钮，在网页中插入节点
+        const btn  = document.querySelector('.btn')
+        btn.addEventListener('click',function(){
+            // 复制原有的 DOM 节点
+            const p2 = document.querySelector('p').cloneNode(true)
+            p2.style.color = 'red'
+
+            // 1.获取一个 DOM 元素节点
+            const p = document.querySelector('p')
+            p.innerText = '创建的新的标签'
+            p.className = 'info'
+
+            // 2.插入盒子box盒子
+            document.querySelector('.box').appendChild(p)
+            document.querySelector('.box').appendChild(p2)
+
+        })
+
+    </script>
+</body>
+</html>

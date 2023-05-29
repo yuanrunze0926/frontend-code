@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件处理</title>
+</head>
+<body>
+    <h3>事件处理</h3>
+    <p class="text">为DOM元素添加事件监听,等待事件发生,便立即执行一个函数</p>
+    <button id="btn">点击改变文字颜色</button>
+    <script>
+        // 双击事件类型
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('dblclick', function(){
+            const text = document.querySelector('.text')
+            // 改变p标签的文字颜色
+            text.style.color = 'red'
+            // 改变p标签的文本内容
+            text.style.fontSize = '20px'
+        })
+
+        // 只要用户双击点击按钮，执行事件
+
+    </script>
+</body>
+</html>

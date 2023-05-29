@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟关系</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>js基础</li>
+        <li>Web Apis</li>
+    </ul>
+    <script>
+        // 获取所有li节点
+        const lis = document.querySelectorAll("ul li");
+
+        // 对所有的li节点添加事件监听
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('click',function(){
+                // 前一个节点 previousSibling
+                console.log(this.previousSibling)
+                // 后一个节点 nextSibling
+                console.log(this.nextSibling)
+            })
+
+        }
+    </script>
+</body>
+</html>

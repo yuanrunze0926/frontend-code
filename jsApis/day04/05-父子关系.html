@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父子关系</title>
+</head>
+<body>
+    <button class="btn">所有的子节点</button>
+    <!-- 获取ul的子节点 -->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS 基础</li>
+        <li>Web apis</li>
+    </ul>
+
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener('click', function(){
+            // 父节点
+            const ul = document.querySelector('ul');
+
+            // 所有子节点
+            console.log(ul.childNodes)
+            // 只包含元素子节点
+            console.log(ul.children)
+        });
+    </script>
+</body>
+</html>
